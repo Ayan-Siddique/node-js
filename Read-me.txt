@@ -1,0 +1,36 @@
+---------------------------7 Nov 2025 ------------------------------
+---------------------------class 3 ------------------------------
+
+
+1) redirecting [
+  res.statusCode = 302;
+    res.setHeader("Location", "/success");
+    return res.end();
+]
+
+2) chunk reading [
+  req.on("data", (chunk) => {
+      console.log(chunk);
+]
+
+3) chunk buffering [
+  req.on("end", () => {
+      const fullBody = Buffer.concat(body).toString();
+      const params = new URLSearchParams(fullBody);
+      console.log(params.entries());
+]
+
+4) Data parsing [
+  const params = new URLSearchParams(fullBody);
+      console.log(params.entries());
+
+       // const finalBody = {};
+       // for ( const [key, val] of params.entries()) {
+       //   finalBody[key] = val;
+       // }
+
+      const finalBody = Object.fromEntries(params)
+      console.log(finalBody);
+]
+
+
