@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffaf3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    h2 {
+      text-align: center;
+      color: #ff5a5f;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #ff5a5f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ff7b80;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Add Your Home 🏠</h2>
+
+    <form action="/host/add-home" method="POST">
+      <input type="text" name="houseName" placeholder="Enter house name" required>
+      <input type="tel" name="phone" placeholder="Enter phone number" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
