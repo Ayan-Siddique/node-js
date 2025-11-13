@@ -1,4 +1,5 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 const PORT = 3006;
 
@@ -15,18 +16,12 @@ app.get("/contact-us", (req, res) => {
 </form>`);
 });
 
-app.post("/contact-us", (req, res) => {
-  const body = [];
-  req.on("data", (chunk) => {
-    body.push(chunk);
-  });
-  req.on("end", ()=>{
-    const fullBody = Buffer.concat(body).toString();
-    console.log(fullBody);
-    
-  })
+app.use(bodyParser.urlencoded());
 
-  res.send(`<h1>Thanks for details</h1>`)
+app.post("/contact-us", (req, res) => {
+  console.log(req.body);
+  
+  res.send(`<h1>Thanks for details</h1>`);
 });
 
 app.listen(PORT, () => {
