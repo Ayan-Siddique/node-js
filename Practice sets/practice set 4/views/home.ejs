@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieSpace</title>
+    <link rel="stylesheet" href="/output.css" />
+  </head>
+  <body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav
+      class="flex justify-between items-center px-6 py-4 bg-black/60 backdrop-blur-md fixed w-full z-50"
+    >
+      <h1 class="text-2xl font-bold">
+        Movie<span class="text-blue-500">Space</span>
+      </h1>
+      <div class="space-x-6 hidden md:block">
+        <a href="/" class="hover:text-blue-400">Home</a>
+        <a href="/movies" class="hover:text-blue-400">Movies</a>
+        <a href="/series" class="hover:text-blue-400">Series</a>
+        <a href="/my-list" class="hover:text-blue-400">My List</a>
+      </div>
+      <button class="btn btn-sm bg-blue-600 px-4 py-1 rounded-lg">Login</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="h-[80vh] w-full bg-cover bg-center flex items-end p-10"
+      style="
+        background-image: url('https://wallpaperaccess.com/full/329583.jpg');
+      "
+    >
+      <div class="max-w-xl">
+        <h2 class="text-5xl font-extrabold mb-4">Featured Movie</h2>
+        <p class="text-gray-300 mb-4">
+          A thrilling adventure of heroes rising against impossible odds.
+        </p>
+        <button
+          class="bg-blue-600 px-6 py-2 rounded-lg text-lg font-semibold hover:bg-blue-700"
+        >
+          ▶ Watch Now
+        </button>
+      </div>
+    </section>
+
+    <!-- Trending Movies -->
+    <section class="px-6 mt-10">
+      <h2 class="text-2xl font-bold mb-4">Recent Uploads</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="bg-[#1c1c1c] rounded-xl p-4 shadow-xl hover:scale-[1.02] transition cursor-pointer"
+        >
+          <img
+            src="https://image.tmdb.org/t/p/w500/6HbVyW6FwqSNPgkAwm791AfsV0a.jpg"
+            class="rounded-lg mb-4"
+          />
+          <div class="flex gap-2 text-xs mb-2">
+            <span class="bg-gray-700 px-2 py-1 rounded-full">TV SERIES</span>
+            <span class="bg-gray-700 px-2 py-1 rounded-full">ENGLISH</span>
+          </div>
+          <h3 class="font-semibold text-sm leading-tight mb-2">
+            Death by Lightning (2025)
+          </h3>
+          <div class="flex justify-between text-gray-400 text-xs">
+            <span>4 hours ago</span>
+            <span>835 views</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-[#1c1c1c] rounded-xl p-4 shadow-xl hover:scale-[1.02] transition cursor-pointer"
+        >
+          <img
+            src="https://image.tmdb.org/t/p/w500/4WKJhKzv3gx8QtbOoxv7I75PwW2.jpg"
+            class="rounded-lg mb-4"
+          />
+          <div class="flex gap-2 text-xs mb-2">
+            <span class="bg-gray-700 px-2 py-1 rounded-full">MOVIES</span>
+            <span class="bg-gray-700 px-2 py-1 rounded-full">HOLLYWOOD</span>
+          </div>
+          <h3 class="font-semibold text-sm leading-tight mb-2">
+            A Very Jonas Christmas
+          </h3>
+          <div class="flex justify-between text-gray-400 text-xs">
+            <span>4 hours ago</span>
+            <span>194 views</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-[#1c1c1c] rounded-xl p-4 shadow-xl hover:scale-[1.02] transition cursor-pointer"
+        >
+          <img
+            src="https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg"
+            class="rounded-lg mb-4"
+          />
+          <div class="flex gap-2 text-xs mb-2">
+            <span class="bg-gray-700 px-2 py-1 rounded-full">MOVIES</span>
+            <span class="bg-gray-700 px-2 py-1 rounded-full">NETFLIX</span>
+          </div>
+          <h3 class="font-semibold text-sm leading-tight mb-2">Kate (2021)</h3>
+          <div class="flex justify-between text-gray-400 text-xs">
+            <span>4 hours ago</span>
+            <span>32.8K views</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Series -->
+    <section class="px-6 mt-10 mb-20">
+      <h2 class="text-2xl font-bold mb-4">Popular Series</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        <img
+          src="https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg"
+          class="rounded-lg hover:scale-105 transition"
+        />
+        <img
+          src="https://image.tmdb.org/t/p/w500/roaqdCHROhKIZ5FY4WvpIhZtc1A.jpg"
+          class="rounded-lg hover:scale-105 transition"
+        />
+        <img
+          src="https://image.tmdb.org/t/p/w500/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg"
+          class="rounded-lg hover:scale-105 transition"
+        />
+        <img
+          src="https://image.tmdb.org/t/p/w500/qJRB789ceLryrLvOKrZqLKr2CGf.jpg"
+          class="rounded-lg hover:scale-105 transition"
+        />
+        <img
+          src="https://image.tmdb.org/t/p/w500/hPea3Qy5Gd6z4kJLUruBbwAH8Rm.jpg"
+          class="rounded-lg hover:scale-105 transition"
+        />
+      </div>
+    </section>
+  </body>
+</html>

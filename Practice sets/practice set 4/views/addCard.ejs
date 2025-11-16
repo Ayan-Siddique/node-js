@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Movie - MovieSpace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white min-h-screen p-10">
+    <h1 class="text-3xl font-bold mb-6">Add New Movie</h1>
+
+    <form class="bg-[#1c1c1c] p-8 rounded-xl max-w-2xl space-y-6">
+      <div>
+        <label class="block mb-1 text-sm">Movie Title</label>
+        <input
+          type="text"
+          class="w-full p-3 rounded bg-gray-800 border border-gray-700"
+          placeholder="Enter movie title"
+        />
+      </div>
+
+      <div>
+        <label class="block mb-1 text-sm">Image URL (Poster)</label>
+        <input
+          type="text"
+          class="w-full p-3 rounded bg-gray-800 border border-gray-700"
+          placeholder="Paste poster link"
+        />
+      </div>
+
+      <div>
+        <label class="block mb-1 text-sm">Categories</label>
+        <input
+          type="text"
+          class="w-full p-3 rounded bg-gray-800 border border-gray-700"
+          placeholder="e.g. MOVIES, HOLLYWOOD, NETFLIX"
+        />
+      </div>
+
+      <div>
+        <label class="block mb-1 text-sm">Description</label>
+        <textarea
+          class="w-full p-3 rounded bg-gray-800 border border-gray-700"
+          rows="4"
+          placeholder="Movie full description..."
+        ></textarea>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block mb-1 text-sm">Upload Time</label>
+          <input
+            type="text"
+            class="w-full p-3 rounded bg-gray-800 border border-gray-700"
+            placeholder="e.g. 4 hours ago"
+          />
+        </div>
+        <div>
+          <label class="block mb-1 text-sm">Views</label>
+          <input
+            type="number"
+            class="w-full p-3 rounded bg-gray-800 border border-gray-700"
+            placeholder="e.g. 2000"
+          />
+        </div>
+      </div>
+
+      <button
+        class="w-full bg-blue-600 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700"
+      >
+        Add Movie
+      </button>
+    </form>
+  </body>
+</html>

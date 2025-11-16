@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My List - MovieSpace</title>
+  <link rel="stylesheet" href="/output.css">
+</head>
+<body class="bg-black text-white p-10 min-h-screen">
+
+  <h1 class="text-4xl font-extrabold text-center mb-10">My List</h1>
+
+  <!-- Empty State -->
+  <div class="hidden" id="emptyState">
+    <div class="flex flex-col items-center justify-center mt-20 text-gray-400">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
+      </svg>
+      <p class="text-xl">Your watchlist is empty 😢</p>
+      <p class="mt-2">Add movies or series to see them here.</p>
+    </div>
+  </div>
+
+  <!-- Watchlist Grid -->
+  <div id="listGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+    <!-- Example Watchlist Cards -->
+    <img src="https://image.tmdb.org/t/p/w500/6HbVyW6FwqSNPgkAwm791AfsV0a.jpg" class="rounded-xl hover:scale-105 transition shadow-xl" />
+    <img src="https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg" class="rounded-xl hover:scale-105 transition shadow-xl" />
+    <img src="https://image.tmdb.org/t/p/w500/4WKJhKzv3gx8QtbOoxv7I75PwW2.jpg" class="rounded-xl hover:scale-105 transition shadow-xl" />
+    <img src="https://image.tmdb.org/t/p/w500/r7Dfg9aRZ78gJsmDlCirIIlNH3d.jpg" class="rounded-xl hover:scale-105 transition shadow-xl" />
+    <img src="https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg" class="rounded-xl hover:scale-105 transition shadow-xl" />
+  </div>
+
+</body>
+</html>
