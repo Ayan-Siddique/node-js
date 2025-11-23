@@ -1,0 +1,27 @@
+<div
+  class="inline-block w-[210px] h-[310px] shrink-0 relative group rounded-xl overflow-hidden"
+>
+  <!-- Poster Image -->
+  <img
+    src="<%= card.poster %>"
+    class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+  />
+
+  <!-- TOP Badge (HOT, NEW, Recommended) -->
+  <span
+    class="absolute top-2 left-2 bg-red-600 text-white text-[10px] px-2 py-[2px] rounded-md font-bold shadow"
+  >
+    HOT
+  </span>
+
+  <div
+    class="absolute bottom-0 left-0 w-full h-full p-3 translate-y-80 group-hover:translate-y-0 transition-all duration-500 bg-white/20 backdrop-blur-lg rounded-t-xl text-white text-sm font-medium"
+  >
+    <h3 class="font-semibold"><%= card.title %> · <%= card.rating %></h3>
+    <p class="opacity-90 text-[12px]">
+      Hindi · <%= card.genere %> · <%= card.release %>
+    </p>
+
+    <p class="opacity-90 text-[12px]"><%= card.description %></p>
+  </div>
+</div>

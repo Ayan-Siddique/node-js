@@ -1,0 +1,15 @@
+<!-- Navbar -->
+<nav
+  class="flex justify-between items-center px-6 py-4 bg-black/60 backdrop-blur-md fixed w-full z-50"
+>
+  <h1 class="text-2xl font-bold">
+    Movie<span class="text-blue-500">Space</span>
+  </h1>
+  <div class="space-x-6 hidden md:block">
+    <a href="/" class="<%= current === 'home' ? 'text-blue-400' : 'hover:text-blue-400' %>">Home</a>
+    <a href="/movies" class="<%= current === 'movies' ? 'text-blue-400' : 'hover:text-blue-400' %>">Movies</a>
+    <a href="/series" class="<%= current === 'series' ? 'text-blue-400' : 'hover:text-blue-400' %>">Series</a>
+    <a href="/my-list" class="<%= current === 'myList' ? 'text-blue-400' : 'hover:text-blue-400' %>">My List</a>
+  </div>
+  <button class="btn btn-sm bg-blue-600 px-4 py-1 rounded-lg">Login</button>
+</nav>

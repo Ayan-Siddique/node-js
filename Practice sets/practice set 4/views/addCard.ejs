@@ -9,11 +9,16 @@
   <body class="bg-black text-white min-h-screen p-10">
     <h1 class="text-3xl font-bold mb-6">Add New Movie</h1>
 
-    <form class="bg-[#1c1c1c] p-8 rounded-xl max-w-2xl space-y-6">
+    <form
+      action="/admin/add-cards"
+      method="POST"
+      class="bg-[#1c1c1c] p-8 rounded-xl max-w-2xl space-y-6"
+    >
       <div>
         <label class="block mb-1 text-sm">Movie Title</label>
         <input
           type="text"
+          name="title"
           class="w-full p-3 rounded bg-gray-800 border border-gray-700"
           placeholder="Enter movie title"
         />
@@ -23,6 +28,7 @@
         <label class="block mb-1 text-sm">Image URL (Poster)</label>
         <input
           type="text"
+          name="poster"
           class="w-full p-3 rounded bg-gray-800 border border-gray-700"
           placeholder="Paste poster link"
         />
@@ -30,11 +36,20 @@
 
       <div>
         <label class="block mb-1 text-sm">Categories</label>
-        <input
-          type="text"
-          class="w-full p-3 rounded bg-gray-800 border border-gray-700"
-          placeholder="e.g. MOVIES, HOLLYWOOD, NETFLIX"
-        />
+        <select
+          class="select select-bordered w-full p-3 rounded bg-gray-800 border border-gray-700"
+          name="genere"
+        >
+          <option disabled selected>Choose genre</option>
+          <option>Action</option>
+          <option>Adventure</option>
+          <option>Comedy</option>
+          <option>Drama</option>
+          <option>Horror</option>
+          <option>Romance</option>
+          <option>Sci-Fi</option>
+          <option>Thriller</option>
+        </select>
       </div>
 
       <div>
@@ -42,25 +57,32 @@
         <textarea
           class="w-full p-3 rounded bg-gray-800 border border-gray-700"
           rows="4"
+          name="description"
           placeholder="Movie full description..."
         ></textarea>
       </div>
 
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <label class="block mb-1 text-sm">Upload Time</label>
+          <label class="block mb-1 text-sm">Year Release</label>
           <input
-            type="text"
+            type="number"
+            name="release"
             class="w-full p-3 rounded bg-gray-800 border border-gray-700"
-            placeholder="e.g. 4 hours ago"
+            placeholder="2025"
           />
         </div>
         <div>
-          <label class="block mb-1 text-sm">Views</label>
+          <label class="label">
+            <span class="label-text font-semibold">Rating (1–10)</span>
+          </label>
           <input
             type="number"
+            min="1"
+            max="10"
+            name="rating"
+            placeholder="8.5"
             class="w-full p-3 rounded bg-gray-800 border border-gray-700"
-            placeholder="e.g. 2000"
           />
         </div>
       </div>
