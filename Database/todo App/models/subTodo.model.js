@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const subTodoSchema = mongoose.Schema(
+const subTodoSchema = new mongoose.Schema(
   {
     content: {
       type: String,
@@ -17,7 +17,7 @@ const subTodoSchema = mongoose.Schema(
       required: [true, "User is require"],
     },
   },
-  { timeStamps: true },
+  { timestamps: true },
 );
 
 const SubTodo = mongoose.model("SubTodo", subTodoSchema);
